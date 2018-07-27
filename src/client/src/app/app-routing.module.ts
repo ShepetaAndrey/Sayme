@@ -9,26 +9,20 @@ import { NavigationToolsComponent } from './navigation-tools/navigation-tools.co
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/menu',
+    redirectTo: '',
     pathMatch: 'full'
   },
   {
-    path: 'menu',
-    component: NavigationToolsComponent,
-    children: [
-      {
-        path: 'post',
-        component: PostComponent,
-      },
-      {
-        path: 'interesting',
-        component: TestComponent,
-      },
-      {
-        path: '**',
-        component: AboutUserBodyComponent,
-      }
-    ]
+    path: 'post',
+    component: PostComponent,
+  },
+  {
+    path: 'interesting',
+    component: TestComponent,
+  },
+  {
+    path: '**',
+    component: AboutUserBodyComponent,
   }
 ];
 
